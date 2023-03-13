@@ -9,21 +9,21 @@ import se.harbil.policetwitter.model.WantedRegions;
 import se.harbil.policetwitter.repository.UnwantedContentRepository;
 import se.harbil.policetwitter.repository.WantedRegionsRepository;
 
-@SpringBootTest
-@ActiveProfiles("local")
+//@SpringBootTest
+//@ActiveProfiles("local")
 class EventUtilTest {
 
-    @Autowired
+    //@Autowired
     UnwantedContentRepository unwantedContentRepository;
-    @Autowired
+    //@Autowired
     WantedRegionsRepository wantedRegionsRepository;
 
-    @Test
+    //@Test
     void insertUnwantedWordsInDb() {
         unwantedContentRepository.save(UnwantedContent.builder().content("Sammanfattning").build());
     }
 
-    @Test
+    //@Test
     void insertWantedRegionDb() {
         wantedRegionsRepository.save(WantedRegions.builder().region("Botkyrka").build());
         wantedRegionsRepository.save(WantedRegions.builder().region("Danderyd").build());
