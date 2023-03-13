@@ -15,7 +15,7 @@ public class TwitterClient {
     }
 
     public void sendTweet(String message) throws TwitterException {
-        //twitterClient.updateStatus(message);
+        twitterClient.updateStatus(message);
       log.info(message);
     }
 }
