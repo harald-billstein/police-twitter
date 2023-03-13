@@ -25,6 +25,6 @@ public class MessageComposer {
        // } else {
             messageSize = event.getSummary().length() + hashTag.length();
             return createMessage(event.getSummary(), hashTag, messageSize);
-        }
+        //}
     }
 }
