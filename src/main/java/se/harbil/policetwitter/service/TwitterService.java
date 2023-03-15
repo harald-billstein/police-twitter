@@ -29,7 +29,7 @@ public class TwitterService {
     public void sendTweet(PoliceEventKafkaModel event) {
         try {
             if (contentFilter.hasUnwantedContent(event)) {
-                log.info("Found unwanted content: {} location: {}", event.getSummary(),
+                log.debug("Found unwanted content: {} location: {}", event.getSummary(),
                     event.getLocationName());
                 return;
             }
