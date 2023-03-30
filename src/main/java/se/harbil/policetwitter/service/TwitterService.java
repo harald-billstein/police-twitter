@@ -33,14 +33,12 @@ public class TwitterService {
                     event.getLocationName());
                 return;
             }
-            String hashTag = hashTagCreator.getHashTag(event);
 
-            String message = messageComposer.createMessageNotLongerThen280Char(event, hashTag);
+            String message = messageComposer.createMessageNotLongerThen280Char(event);
 
             twitterClient.sendTweet(message);
         } catch (Exception e) {
-            log.warn("Failed to send tweet: {} got error: {}", event, e);
-
+            log.warn("Failed to send tweet: {} got error: {}", event, e.getMessage());
         }
     }
 }
