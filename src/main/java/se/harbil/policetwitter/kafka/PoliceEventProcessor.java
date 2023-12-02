@@ -2,6 +2,7 @@ package se.harbil.policetwitter.kafka;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.stereotype.Component;
@@ -9,21 +10,16 @@ import se.harbil.policetwitter.model.PoliceEventKafkaModel;
 import se.harbil.policetwitter.service.TwitterService;
 
 
-
 @Slf4j
 @Component
+@RequiredArgsConstructor
 public class PoliceEventProcessor {
 
     private final TwitterService twitterService;
 
     private final ObjectMapper objectMapper;
 
-    public PoliceEventProcessor(TwitterService twitterService, ObjectMapper objectMapper) {
-        this.twitterService = twitterService;
-        this.objectMapper = objectMapper;
-    }
-
-    public void processEvent(ConsumerRecord<String, String> payload) {
+    public void processEvent(final ConsumerRecord<String, String> payload) {
         try {
             PoliceEventKafkaModel event = objectMapper.readValue(payload.value(),
                 PoliceEventKafkaModel.class);

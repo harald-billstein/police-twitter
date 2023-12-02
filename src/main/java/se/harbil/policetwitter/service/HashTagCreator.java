@@ -9,17 +9,17 @@ import se.harbil.policetwitter.model.PoliceEventKafkaModel;
 public class HashTagCreator {
     private final String whiteSpace = " ";
 
-    public String getHashTag(PoliceEventKafkaModel eventKafkaModel) {
+    public String getHashTag(final PoliceEventKafkaModel eventKafkaModel) {
         String location = extractLocation(eventKafkaModel.getLocationName());
         String type = extractHashTag(eventKafkaModel.getType());
         return location + type;
     }
 
-    private String extractLocation(String locationName) {
+    private String extractLocation(final String locationName) {
         return whiteSpace + "#" + locationName.replace(" ", "") + whiteSpace;
     }
 
-    private String extractHashTag(String type) {
+    private String extractHashTag(final String type) {
 
         return switch (type.toLowerCase()) {
             case "anträffad död" -> "#anträffad #död" + whiteSpace;

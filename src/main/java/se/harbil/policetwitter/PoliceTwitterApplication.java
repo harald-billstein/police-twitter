@@ -11,18 +11,18 @@ import se.harbil.policetwitter.config.InitData;
 @EnableMongoRepositories
 public class PoliceTwitterApplication {
 
-  private final InitData initData;
+    private final InitData initData;
 
-  public PoliceTwitterApplication(InitData initData) {
-    this.initData = initData;
-  }
+    public PoliceTwitterApplication(final InitData initData) {
+        this.initData = initData;
+    }
 
-  public static void main(String[] args) {
-    SpringApplication.run(PoliceTwitterApplication.class, args);
-  }
+    public static void main(final String[] args) {
+        SpringApplication.run(PoliceTwitterApplication.class, args);
+    }
 
-  @Bean
-  CommandLineRunner init() {
-    return args -> initData.loadDefaultDataToMongo();
-  }
+    @Bean
+    CommandLineRunner init() {
+        return args -> initData.loadDefaultDataToMongo();
+    }
 }

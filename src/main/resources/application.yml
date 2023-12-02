@@ -1,0 +1,15 @@
+server:
+  port: 8083
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:password@localhost:27017/twitter-bot?authSource=admin
+app:
+  twitter:
+    baseurl: https://api.twitter.com/2/tweets
+    authentication:
+      consumer-key: xxx
+      consumer-secret: xxx
+      token: xxx
+      token-secret: xxx
+

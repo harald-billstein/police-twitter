@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 
 @Getter
 @Builder
-@EqualsAndHashCode(exclude="id")
+@EqualsAndHashCode(exclude = "id")
 public class UnwantedContent {
 
     @Id
