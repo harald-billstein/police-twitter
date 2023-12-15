@@ -13,9 +13,9 @@
     <artifactId>police-twitter</artifactId>
     <version>0.0.1</version>
     <name>police-twitter</name>
-    <description>Tweeting messages from Swedish police event api</description>
+    <description>Tweeting messages from Swedish police</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
       <checkstyle.version>3.2.1</checkstyle.version>
       <error-prone.version>2.18.0</error-prone.version>
       <null-away.version>0.10.10</null-away.version>
@@ -28,13 +28,11 @@
         <artifactId>spring-boot-starter-webflux</artifactId>
       </dependency>
 
-
         <!--SPRING-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-json</artifactId>
       </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -129,7 +127,7 @@
                       -Xep:EqualsGetClass:OFF \
                       -Xep:JavaTimeDefaultTimeZone:OFF \
                       -Xep:NullAway:OFF \
-                      -XepOpt:NullAway:AnnotatedPackages=se.folksam.aml \
+                      -XepOpt:NullAway:AnnotatedPackages=se.harbil.policetwitter \
                       -XepExcludedPaths:.*/target/generated-sources/.*
                     </arg>
                   </compilerArgs>
