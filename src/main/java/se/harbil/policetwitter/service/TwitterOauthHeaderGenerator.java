@@ -55,7 +55,7 @@ public class TwitterOauthHeaderGenerator {
         String baseSignatureString = generateSignatureBaseString(requestParams, nonce, timestamp);
         append(base, OAUTH_SIGNATURE, encryptUsingHmacSha1(baseSignatureString));
         base.deleteCharAt(base.length() - 1);
-        log.debug("header : " + base);
+        log.info("header : " + base);
         return base.toString();
     }
 

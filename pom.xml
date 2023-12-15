@@ -11,7 +11,7 @@
     </parent>
     <groupId>se.harbil</groupId>
     <artifactId>police-twitter</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>police-twitter</name>
     <description>Tweeting messages from Swedish police</description>
     <properties>
